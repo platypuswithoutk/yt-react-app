@@ -1,17 +1,29 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-//import youtube from './api/youtube';
+import youtube from './api/youtube';
 import SearchBar from './components/SearchBar';
 import VideoDetails from './components/VideoDetail';
 
 class App extends React.Component {
+    handleSubmit = async (searchTerm) => {
+        const response = await youtube.get('search',{
+            params: {
+                part: 'snippet',
+                maxResult: 5,
+                key: 'AIzaSyA3A8f7ow0V6nR5ZYmUstnHyS0V1MQvloQ',
+                q: searchTerm,
+            }
+        });
+        console.log(response);
+    }
+
     render() {
         return(
-            <Grid justify="center" container spacing={16}>
+            <Grid justify="center" container spacing={10}>
                 <Grid item xs={12}>
-                    <Grid container spacink={16}>
+                    <Grid container spacink={10}>
                         <Grid item xs={12}>
-                            <SearchBar />
+                            <SearchBar onFormSubmit={this.handleSubmit}/>
                         </Grid>
                         <Grid item xs={8}>
                             <VideoDetails />
