@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.handleSubmit('CZYM JEST PROGRAMOWANIE OBIEKTOWE')
+        this.handleSubmit('CZYM JEST PROGRAMOWANIE OBIEKTOWE?')
     }
 
     onVideoSelect = (video) => {
