@@ -8,7 +8,7 @@ import VideoList from './components/VideoList';
 class App extends React.Component {
 
     state = {
-        video: [],
+        videos: [],
         selectedVideo: null,
     }
 
@@ -25,7 +25,7 @@ class App extends React.Component {
     }
 
     render() {
-        const { selectedVideo } = this.state;
+        const { selectedVideo, videos } = this.state;
         return(
             <Grid justify="center" container spacing={10}>
                 <Grid item xs={12}>
@@ -37,7 +37,7 @@ class App extends React.Component {
                             <VideoDetails video={selectedVideo}/>
                         </Grid>
                         <Grid item xs={4}>
-                            <VideoList />
+                            <VideoList videos={videos}/>
                         </Grid>
                     </Grid>   
                 </Grid>
