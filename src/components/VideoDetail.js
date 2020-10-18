@@ -1,5 +1,6 @@
 import React from 'react';
-import { Paper, Typography } from '@material-ui/core'
+import { Paper, Typography } from '@material-ui/core';
+import '../style/VideoDetailsStyle.css';
 
 const VideoDetail = ({video}) => {
 
@@ -9,7 +10,7 @@ const VideoDetail = ({video}) => {
     const VideoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
     return(
         <React.Fragment>
-            <Paper elevation={6} style={{height:'50%'}}>
+            <Paper elevation={6} className="main-video">
                 <iframe frameBorder="0" height="100%" width="100%" title="Video Player" src={VideoSrc} />
             </Paper>
             <Paper elevation={6} style={{padding:'15px'}}>

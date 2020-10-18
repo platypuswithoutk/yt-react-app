@@ -1,0 +1,7 @@
+.main-video {
+    height: 40%; 
+}
+
+.MuiGrid-spacing-xs-10, .MuiGrid-item{
+    padding: 20px !important;
+}
