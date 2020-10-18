@@ -1,0 +1,8 @@
+.text-field {
+    background-color: rgb(245, 245, 243);
+}
+
+.text-field-paper {
+    padding: 5px 10px;
+    border: 4px solid black; 
+}
