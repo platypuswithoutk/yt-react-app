@@ -1,0 +1,9 @@
+.video-item-paper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.video-item-img {
+    margin-right: 20px;
+}
